@@ -1,0 +1,18 @@
+
+venv  ---> Activate 
+
+requirements --> Install 
+
+src ---> package 
+
+src --> logger.py  ---> for logs 
+
+src ---> exception.py ---> for error handling 
+
+src ---> utils.py ---> for model import , export and performance evalaution 
+
+notebook folder --> data folder ---> covid_toy.csv 
+
+src ---> compoents ---> __init__.py 
+
+src ----> compoents ---> data_ingestion.py 
