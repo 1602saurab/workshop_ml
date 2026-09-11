@@ -1,0 +1,1 @@
+[2026-09-11 11:27:54,685] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\components\data_transformation.py]at line number: [57]with error message: [[Errno 2] No such file or directory: 'train.csv']
