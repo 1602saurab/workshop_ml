@@ -18,3 +18,10 @@ src ---> compoents ---> __init__.py
 src ----> compoents ---> data_ingestion.py 
 
 src ---> compoents ---> data_transformation.py 
+
+src ---> components ---> model_trainer.py 
+
+src ---> pipeline ---> train_pipeline.py
+
+
+src ---> pipeline ---> predict_pipeline.py

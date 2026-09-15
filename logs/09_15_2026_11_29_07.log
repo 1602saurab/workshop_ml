@@ -1,0 +1,22 @@
+[2026-09-15 11:29:07,609] 11 __main__ -INFO -TRAINING PIPELINE STARTED....
+[2026-09-15 11:29:07,610] 23 src.components.data_ingestion -INFO -Data Ingestion started....
+[2026-09-15 11:29:07,613] 26 src.components.data_ingestion -INFO -Data read successfullywith shape: (100, 6)
+[2026-09-15 11:29:07,620] 31 src.components.data_ingestion -INFO -Performing train-test-split
+[2026-09-15 11:29:07,695] 37 src.components.data_ingestion -INFO -Data Ingestion completed successfully...
+[2026-09-15 11:29:07,696] 38 src.components.data_ingestion -INFO -Jo log online class le rhe h , unko bhi congration , unka bhi data ingestion ho chuka h , leptop per apna hath rkh kr apne aap ko pawan kare.
+[2026-09-15 11:29:07,699] 39 src.components.data_ingestion -INFO -----------
+[2026-09-15 11:29:07,699] 40 src.components.data_ingestion -INFO -Jinka net nhi chl rha online me , unka bhi data ingestion complete
+[2026-09-15 11:29:07,714] 61 src.components.data_transformation -INFO -Train and test data loaded for transformation
+[2026-09-15 11:29:07,723] 51 src.components.data_transformation -INFO -preprocessor object created successfully...
+[2026-09-15 11:29:07,723] 70 src.components.data_transformation -INFO -Applying preprocessing oon train and test data
+[2026-09-15 11:29:07,858] 15 src.utils -INFO -Object saved successfully at : artifacts\preprocessor.pkl
+[2026-09-15 11:29:07,859] 81 src.components.data_transformation -INFO -Preprcoessor bject saved as preprocessor.pkl
+[2026-09-15 11:29:07,861] 23 src.components.model_trainer -INFO -Spliting train and test input data
+[2026-09-15 11:29:08,201] 34 src.utils -INFO -LogisiticRegression -> Test Accuracy: 0.35
+[2026-09-15 11:29:08,320] 34 src.utils -INFO -DecisionTree -> Test Accuracy: 0.35
+[2026-09-15 11:29:09,171] 34 src.utils -INFO -RandomForest -> Test Accuracy: 0.35
+[2026-09-15 11:29:09,260] 34 src.utils -INFO -KNeighboursClassifier -> Test Accuracy: 0.40
+[2026-09-15 11:29:09,267] 43 src.components.model_trainer -INFO -Best Model saved as model.pkl ::: KNeighboursClassifier
+[2026-09-15 11:29:09,309] 15 src.utils -INFO -Object saved successfully at : artifacts\model.pkl
+[2026-09-15 11:29:09,314] 46 src.components.model_trainer -INFO -Best Model saved: KNeighboursClassifier
+[2026-09-15 11:29:09,315] 25 __main__ -INFO -TRAINING PIPELINE COMPLETED | BEST MODEL: KNeighboursClassifier, Accuracy: 0.40

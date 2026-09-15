@@ -23,12 +23,12 @@ def load_object(file_path: str):
     except Exception as e : 
         raise CustomException(e,sys) 
 
-def evaluate_models(x_train, y_train , x_test , y_test, models:dict):
+def evaluate_models(X_train, y_train , X_test , y_test, models:dict):
     try:
         report = {} 
         for model_name , model in models.items():
-            model.fit(x_train , y_train) 
-            y_pred = model.predict(x_test) 
+            model.fit(X_train , y_train) 
+            y_pred = model.predict(X_test) 
             test_accuracy = accuracy_score(y_test , y_pred) 
             report[model_name]  = test_accuracy 
             logger.info(f"{model_name} -> Test Accuracy: {test_accuracy:.2f}")

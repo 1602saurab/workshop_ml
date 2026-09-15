@@ -1,0 +1,20 @@
+[2026-09-15 11:19:36,473] 11 __main__ -INFO -TRAINING PIPELINE STARTED....
+[2026-09-15 11:19:36,473] 23 src.components.data_ingestion -INFO -Data Ingestion started....
+[2026-09-15 11:19:36,511] 26 src.components.data_ingestion -INFO -Data read successfullywith shape: (100, 6)
+[2026-09-15 11:19:36,524] 31 src.components.data_ingestion -INFO -Performing train-test-split
+[2026-09-15 11:19:36,654] 37 src.components.data_ingestion -INFO -Data Ingestion completed successfully...
+[2026-09-15 11:19:36,655] 38 src.components.data_ingestion -INFO -Jo log online class le rhe h , unko bhi congration , unka bhi data ingestion ho chuka h , leptop per apna hath rkh kr apne aap ko pawan kare.
+[2026-09-15 11:19:36,657] 39 src.components.data_ingestion -INFO -----------
+[2026-09-15 11:19:36,657] 40 src.components.data_ingestion -INFO -Jinka net nhi chl rha online me , unka bhi data ingestion complete
+[2026-09-15 11:19:36,669] 61 src.components.data_transformation -INFO -Train and test data loaded for transformation
+[2026-09-15 11:19:36,681] 51 src.components.data_transformation -INFO -preprocessor object created successfully...
+[2026-09-15 11:19:36,682] 70 src.components.data_transformation -INFO -Applying preprocessing oon train and test data
+[2026-09-15 11:19:36,782] 15 src.utils -INFO -Object saved successfully at : artifacts\preprocessor.pkl
+[2026-09-15 11:19:36,783] 81 src.components.data_transformation -INFO -Preprcoessor bject saved as preprocessor.pkl
+[2026-09-15 11:19:36,784] 23 src.components.model_trainer -INFO -Spliting train and test input data
+[2026-09-15 11:19:36,977] 34 src.utils -INFO -LogisiticRegression -> Test Accuracy: 0.46
+[2026-09-15 11:19:37,000] 34 src.utils -INFO -DecisionTree -> Test Accuracy: 0.47
+[2026-09-15 11:19:37,379] 34 src.utils -INFO -RandomForest -> Test Accuracy: 0.38
+[2026-09-15 11:19:37,403] 34 src.utils -INFO -KNeighboursClassifier -> Test Accuracy: 0.47
+[2026-09-15 11:19:37,408] 43 src.components.model_trainer -INFO -Best Model saved as model.pkl ::: DecisionTree
+[2026-09-15 11:19:37,411] 25 __main__ -INFO -TRAINING PIPELINE COMPLETED | BEST MODEL: DecisionTree, Accuracy: 0.47

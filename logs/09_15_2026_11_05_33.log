@@ -1,0 +1,4 @@
+[2026-09-15 11:05:33,340] 54 __main__ -INFO -Model Trainer script started
+[2026-09-15 11:05:33,384] 23 __main__ -INFO -Spliting train and test input data
+[2026-09-15 11:05:33,425] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [30]with error message: [could not convert string to float: 'Male']
+[2026-09-15 11:05:33,425] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\components\model_trainer.py]at line number: [36]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [30]with error message: [could not convert string to float: 'Male']]
