@@ -30,7 +30,7 @@ class CustomData:
 class PredictPipeline:
     def __init__(self):
         self.model_path = os.path.join("artifacts", "model.pkl") 
-        self.preprocessor_path = os.path.join("arrtifacts", "preprocessor.pkl") 
+        self.preprocessor_path = os.path.join("artifacts", "preprocessor.pkl") 
 
     def predict(self, features: pd.DataFrame):
         try:
@@ -45,7 +45,7 @@ class PredictPipeline:
             if hasattr(model, "predict_proba"):
                 probability = round(max(model.predict_proba(data_scaled)[0])*100,2)
 
-            result = "Positive" if int(prediction)[0] == 1 else "Negative" 
+            result = "Positive" if int(prediction[0]) == 1 else "Negative" 
             logger.info(f"Prediction completed: {result}, confidence_score = {probability}") 
             return result, probability 
         except Exception as e : 

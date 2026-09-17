@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Covid Screening — Sanjeevani Clinic</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="brand">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 21s-7.5-4.6-9.8-9.4C.6 7.9 2.4 4.5 6 4.1c2-.2 3.6.9 6 3 2.4-2.1 4-3.2 6-3 3.6.4 5.4 3.8 3.8 7.5C19.5 16.4 12 21 12 21z" fill="#F6F3EC"/>
+        </svg>
+      </span>
+      Sanjeevani Clinic
+    </a>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-shell">
+      <div class="eyebrow-block">
+        <h1>Covid screening desk</h1>
+        <p class="sub">Fill in the patient's details below to get an instant screening result.</p>
+      </div>
+
+      <div class="card">
+        <form action="/predict" method="post">
+          <div class="field-grid">
+            <div class="field">
+              <label for="age">Age (years)</label>
+              <input type="number" id="age" name="age" min="0" max="120" required
+                     value="{{ form_data.age if form_data else '' }}" placeholder="e.g. 34" />
+            </div>
+
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="Male" {% if form_data and form_data.gender == 'Male' %}selected{% endif %}>Male</option>
+                <option value="Female" {% if form_data and form_data.gender == 'Female' %}selected{% endif %}>Female</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="fever">Body temperature (°F)</label>
+              <input type="number" step="0.1" id="fever" name="fever" required
+                     value="{{ form_data.fever if form_data else '' }}" placeholder="e.g. 101.0" />
+            </div>
+
+            <div class="field">
+              <label for="cough">Cough</label>
+              <select id="cough" name="cough" required>
+                <option value="Mild" {% if form_data and form_data.cough == 'Mild' %}selected{% endif %}>Mild</option>
+                <option value="Strong" {% if form_data and form_data.cough == 'Strong' %}selected{% endif %}>Strong</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="city">City</label>
+              <select id="city" name="city" required>
+                {% for c in ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore'] %}
+                <option value="{{ c }}" {% if form_data and form_data.city == c %}selected{% endif %}>{{ c }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit">Check my result</button>
+          </div>
+        </form>
+
+        {% if result %}
+        <div class="result-card {{ 'positive' if result == 'Positive' else 'negative' }}">
+          <div class="result-icon">
+            {% if result == 'Positive' %}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16h.01M10.3 3.9L2.5 17a2 2 0 001.7 3h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% else %}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% endif %}
+          </div>
+          <div>
+            <p class="result-title">
+              {% if result == 'Positive' %}Likely Covid Positive{% else %}Likely Covid Negative{% endif %}
+            </p>
+            <p class="result-sub">
+              Model confidence: {{ probability }}% — this is a screening estimate, please consult the doctor for confirmation.
+            </p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Sanjeevani Screening Clinic — this tool assists triage, it does not replace medical diagnosis.
+  </footer>
+
+</body>
+</html>

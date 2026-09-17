@@ -1,0 +1,7 @@
+[2026-09-17 11:10:29,694] 22 main -INFO -Home page accessed...
+[2026-09-17 11:11:50,617] 27 main -INFO -Predict form page accessed.....
+[2026-09-17 11:13:37,235] 40 main -INFO -Prediction request received :: age25, genderMale, fever104.0, coughMild,cityKolkata
+[2026-09-17 11:13:37,250] 37 src.pipeline.predict_pipeline -INFO -Loading Model and Preprocessor
+[2026-09-17 11:13:40,039] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [21]with error message: [[Errno 2] No such file or directory: 'arrtifacts\\preprocessor.pkl']
+[2026-09-17 11:13:40,045] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\pipeline\predict_pipeline.py]at line number: [39]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [21]with error message: [[Errno 2] No such file or directory: 'arrtifacts\\preprocessor.pkl']]
+[2026-09-17 11:13:40,045] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\main.py]at line number: [44]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\pipeline\predict_pipeline.py]at line number: [39]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [21]with error message: [[Errno 2] No such file or directory: 'arrtifacts\\preprocessor.pkl']]]
