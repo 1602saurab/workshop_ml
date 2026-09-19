@@ -1,0 +1,3 @@
+[2026-09-19 11:15:05,322] 28 nlp_pretrained.sentiment_analyzer -INFO -VADER sentiment for 'I absolutely love this product. It is amazing!' : {'neg': 0.0, 'neu': 0.368, 'pos': 0.632, 'compound': 0.862, 'urgency_hint': 'Low'}
+[2026-09-19 11:15:05,337] 28 nlp_pretrained.sentiment_analyzer -INFO -VADER sentiment for 'This service is terrible. I am extremely disappointed.' : {'neg': 0.565, 'neu': 0.435, 'pos': 0.0, 'compound': -0.7574, 'urgency_hint': 'High'}
+[2026-09-19 11:15:05,338] 28 nlp_pretrained.sentiment_analyzer -INFO -VADER sentiment for 'The meeting is scheduled for Monday at 10 AM.' : {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0, 'urgency_hint': 'Low'}

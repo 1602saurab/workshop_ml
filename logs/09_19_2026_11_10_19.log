@@ -1,0 +1,7 @@
+[2026-09-19 11:10:19,429] 15 nlp_pretrained.embedding -INFO -Loading pretrained Model for Embeddings: glove-wiki-gigaword-50
+[2026-09-19 11:10:20,017] 2049 gensim.models.keyedvectors -INFO -loading projection weights from C:\Users\saurabh/gensim-data\glove-wiki-gigaword-50\glove-wiki-gigaword-50.gz
+[2026-09-19 11:11:11,734] 447 gensim.utils -INFO -KeyedVectors lifecycle event {'msg': 'loaded (400000, 50) matrix of type float32 from C:\\Users\\saurabh/gensim-data\\glove-wiki-gigaword-50\\glove-wiki-gigaword-50.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2026-09-19T11:11:11.639546', 'gensim': '4.4.0', 'python': '3.12.10 (main, Apr  9 2025, 04:06:22) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-11-10.0.26200-SP0', 'event': 'load_word2vec_format'}
+[2026-09-19 11:11:11,739] 17 nlp_pretrained.embedding -INFO -Embeddings Loaded , Vocabulary size: 400000
+[2026-09-19 11:11:11,865] 28 nlp_pretrained.embedding -INFO -Most Similar to 'king' : '[('prince', 0.8236179351806641), ('queen', 0.7839043140411377), ('ii', 0.7746230363845825), ('emperor', 0.7736247777938843), ('son', 0.766719400882721)]'
+[2026-09-19 11:11:11,893] 28 nlp_pretrained.embedding -INFO -Most Similar to 'computer' : '[('computers', 0.9165045022964478), ('software', 0.8814992904663086), ('technology', 0.852556049823761), ('electronic', 0.812586784362793), ('internet', 0.8060455322265625)]'
+[2026-09-19 11:11:11,893] 37 nlp_pretrained.embedding -INFO -Similarity('king', 'queen') = 0.784
