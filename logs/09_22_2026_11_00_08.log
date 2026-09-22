@@ -1,0 +1,8 @@
+[2026-09-22 11:01:29,666] 27 main -INFO -Home page accessed...
+[2026-09-22 11:03:15,968] 27 nlp_pretrained.ner_tagger -INFO -NLTK pretrained NER extracted from 'I  have fever from 5 days and I am from Jaipur' : {'GPE': ['Jaipur'], 'PERSON': [], 'ORGANIZATION': []}
+[2026-09-22 11:03:16,233] 28 nlp_pretrained.sentiment_analyzer -INFO -VADER sentiment for 'I  have fever from 5 days and I am from Jaipur' : {'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0, 'urgency_hint': 'Low'}
+[2026-09-22 11:03:16,236] 15 nlp_pretrained.embedding -INFO -Loading pretrained Model for Embeddings: glove-wiki-gigaword-50
+[2026-09-22 11:03:20,169] 2049 gensim.models.keyedvectors -INFO -loading projection weights from C:\Users\saurabh/gensim-data\glove-wiki-gigaword-50\glove-wiki-gigaword-50.gz
+[2026-09-22 11:06:04,558] 447 gensim.utils -INFO -KeyedVectors lifecycle event {'msg': 'loaded (400000, 50) matrix of type float32 from C:\\Users\\saurabh/gensim-data\\glove-wiki-gigaword-50\\glove-wiki-gigaword-50.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2026-09-22T11:06:04.054728', 'gensim': '4.4.0', 'python': '3.12.10 (main, Apr  9 2025, 04:06:22) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-11-10.0.26200-SP0', 'event': 'load_word2vec_format'}
+[2026-09-22 11:06:04,558] 17 nlp_pretrained.embedding -INFO -Embeddings Loaded , Vocabulary size: 400000
+[2026-09-22 11:06:04,834] 28 nlp_pretrained.embedding -INFO -Most Similar to 'i' : '[("'d", 0.9566037058830261), ('me', 0.9546188116073608), ('maybe', 0.9306703805923462), ('know', 0.927360475063324), ("n't", 0.9259788393974304)]'

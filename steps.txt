@@ -46,3 +46,32 @@ ner_tagger
 embeddings
 
 sentiment_analyzer 
+
+demo.py 
+
+templates ---> pretraine_nlp.html
+
+Add tools in main.py 
+
+------------------------------------------------------
+
+tool add ---> New folder ---> package ---> modular code logic setup --> test ---> main.py (oruting, render) , templates folder-->html add 
+
+login page / logput page 
+
+Chatbot ---> create in home page ---> prompting with LLM(groq,gemini) 
+
+Chatbot : hi, what can i help you?
+you: disease, symptoms ---> recommand --> LLM ---> Suggestion problem ---> safety 
+you : neurologist --> Availablity slots ---> Random doctor select ---> Timeslot book --> db add and update (sqlite, mysql)
+User --> Already login 
+
+Mohit Patient ---> First time ---> Stomach Alsar ---> Doctor meeting(Suresh), treatment  
+Mohit Patient ---> Doctor(Suresh) 
+
+User ---> Injury photo ---> LLM decide ---> 
+Normal injury --> OPD ---> OPD DB --> Doctos list --> Doctor Assign with their avilable time 
+Imjury specific ---> LLM see which body part effect ---> Doctor suggest ---> booking 
+
+
+User ALready login ---> User HI , LLM db--> summmmary pick --> 
