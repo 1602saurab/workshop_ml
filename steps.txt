@@ -74,4 +74,4 @@ Normal injury --> OPD ---> OPD DB --> Doctos list --> Doctor Assign with their a
 Imjury specific ---> LLM see which body part effect ---> Doctor suggest ---> booking 
 
 
-User ALready login ---> User HI , LLM db--> summmmary pick --> 
+User ALready login ---> User HI , LLM db--> summmmary pick --> Mohit , old diseaese 

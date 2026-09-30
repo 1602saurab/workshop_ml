@@ -1,0 +1,18 @@
+Agenda ---> Remote MCP SERVER 
+
+DB ---> Products with their user_id  
+
+1_st tool ---> db check product available or not . 
+
+2nd_tool ---> return or refund policy 
+
+fastmcp ---> remotely on 
+
+main.py file ---> fastapi --> fastmcp server remote url use --> as an client 
+
+
+FASTAPI URL HIT ---> MCP SERVER URL HIT ---> TOOL CALL(FUNCTIONS CREATE) 
+
+python mcp_server/order_server.py
+
+uvicorn main:app --reload --port 8000 
