@@ -7,3 +7,4 @@ Jinja2
 python-multipart 
 gensim
 NLTK
+python-dotenv 
