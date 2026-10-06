@@ -1,8 +1,8 @@
 from fastmcp import FastMCP 
 from database import get_doctor , get_patient 
-from src.logger import get_logger 
-logger = get_logger(__name__) 
-from src.exception import CustomException 
+# from src.logger import get_logger 
+# logger = get_logger(__name__) 
+# from src.exception import CustomException 
 mcp = FastMCP("Sanjeevni Clinic MCP Server") 
 
 ##Tool-1: Doctor Schedule 
@@ -44,7 +44,7 @@ def patient_details(patient_id:int):
             "blood_group": patient[4] 
         }
     }
-print(logger.info("Tools setup for mcp server")) 
+# print(logger.info("Tools setup for mcp server")) 
 
 ## Start mcp server 
 
