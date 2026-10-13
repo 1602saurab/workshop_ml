@@ -1,0 +1,35 @@
+RAG ---> Retrival Augmented Generation 
+
+E-commerce platform ----> what is the price of this ---> json format 
+
+Customer support ---> RAG ---> LLm communicate + DB infrmation 
+
+mysql/mongodb ---> Vector DB(chromadb , faiss , pinecone) 
+
+Working process of RAG ---> 
+
+Text of documents ---> Chunking ---> Embedding --> Store in VDB 
+
+User Query --->  embedding ---> V.DB ---> relevant chunks extraction ---> 
+Send to LLM ---> Proper format convert response return 
+
+Example ----> 
+I love python . Python is good. Js is also used in fastapi. 
+
+chunks ---> 
+'I', 'love' , 'python', 'python', 'is' 'good'......
+
+Embedding ----> 
+'0.1', '2.1', '4.5' ......
+
+Stor in V.DB. --> 
+[[0.1,4.5,2.3], [5.6,4.3,2.8].....] 
+
+User --->Query ---> 
+'What is python' ---> Embedding [0.1,4.5,8.9] ---> send to v.db(consine similarity , Euclidiean distance) --->
+related data embedding fetch --->  [[[1.2,5.6,3.4], [2.3,6.7,1.2]]] -->LLM-->
+format into proper textual with their prompt condinition  
+
+
+I love python . js is good and it is used for web development. 
+'I love python', 'python js is', 'is good and', 'and it is' , 'is used for', 'for web d' 
