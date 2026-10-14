@@ -8,3 +8,5 @@ python-multipart
 gensim
 NLTK
 python-dotenv 
+
+faiss-cpu 

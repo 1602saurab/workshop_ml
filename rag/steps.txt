@@ -33,3 +33,6 @@ format into proper textual with their prompt condinition
 
 I love python . js is good and it is used for web development. 
 'I love python', 'python js is', 'is good and', 'and it is' , 'is used for', 'for web d' 
+
+a = 'js is good and it is used for web development.'
+a[-1:-3]

@@ -1,0 +1,4 @@
+[2026-10-14 11:14:59,466] 17 rag.vector_store -INFO -RAG STAGE: VECTOR STORE BUILD STARTED....
+[2026-10-14 11:15:00,568] 15 src.utils -INFO -Object saved successfully at : artifacts\vectorizer.pkl
+[2026-10-14 11:15:00,570] 15 src.utils -INFO -Object saved successfully at : artifacts\chunks.pkl
+[2026-10-14 11:15:00,586] 35 rag.vector_store -INFO ------------RAG STAGE: VECTOR STORE BUILD COMPLETED----------
