@@ -1,0 +1,31 @@
+knowledge_base:
+  source_dir: "rag/knowledge_base"
+  chunk_size: 400 
+  chunk_overlap: 80 
+
+vector_store:
+  vectorizer_path: "rag/artifacts/tfidf_vectorizer.pkl" 
+  faiss_index_path: "rag/artifacts/faiss_index.bin" 
+  chunks_metadata_path: "rag/artifacts/chunks_metadata.pkl" 
+
+retrieval:
+  top_k: 3 
+  min_similarity: 0.05 
+
+generation:
+  model: "openai/gpt-oss-20b"
+  max_tokens: 500 
+  system_prompt: |
+   You are a clinic assistant for Sanjeevani Screening Clinic. Answer
+   the patient's questino using ONLY the proovided context experts 
+   below. Do not use outside knowledge or make up information. 
+
+   Rules:
+   - If the context does not contain the answr, say clearly that 
+   you don't have that information and suggest consulting a doctor.
+   - Never give specific medicine names, dosages, or dosing schedules
+   - always direct the patient to a doctor for that. 
+   - keep answers concise  (3-5 sentences),
+   - Mention which topic/section your answer is based on.
+   - Always end by reminding the patient this is general infoormation,
+     not a medical diagnosis.  

@@ -36,3 +36,13 @@ I love python . js is good and it is used for web development.
 
 a = 'js is good and it is used for web development.'
 a[-1:-3]
+
+
+
+----------------------------------------------
+
+rag folder 
+document_loader.py ---> documents load 
+vector_store.py ----> faiss vector db me embeddings  store 
+retriever.py --->  vector db informtion extract based on simliarity , metadata 
+config/cnfig.yaml  --->  Automation scritpiting for rag 
