@@ -46,3 +46,19 @@ document_loader.py ---> documents load
 vector_store.py ----> faiss vector db me embeddings  store 
 retriever.py --->  vector db informtion extract based on simliarity , metadata 
 config/cnfig.yaml  --->  Automation scritpiting for rag 
+
+----------------------------------------
+
+generator.py  ---> LLM based answer generate 
+
+rag_config_loader ----> Yaml scripting loading 
+
+rag_pipeline  ----> all connectivity 
+
+Monday: Test on class timing 
+
+PDF ---> RAG ---> DATA CHUNKS , EMD , VECTOR DB --> LGS CHECK 
+
+WEDNESDAY tEST ::: 
+PDF  ---> GENRATOR , RAGloADER , RAG_PIPELINE  ---> LOGS CHECK 
+
