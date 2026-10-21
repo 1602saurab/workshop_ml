@@ -14,6 +14,8 @@ from nlp_pretrained.ner_tagger import(get_pos_tags , extract_entities)
 from nlp_pretrained.embedding import (most_similar_words) 
 from nlp_pretrained.sentiment_analyzer import analyze_sentiment 
 
+from rag.rag_pipeline import RAGPipeline 
+
 app= FastAPI(title="Covid Prediction Clinic") 
 
 ##mouting the css file 
@@ -164,6 +166,28 @@ async def pretrained_nlp_analysis(
         )
      
 
+
+###RAG Pipeline 
+rag_pipeline = RAGPipeline() 
+
+@app.get("/ask", response_class=HTMLResponse)
+async def clinic_assistant_form(request:Request):
+    logger.info("Clinic assistant(RAG) FORM page accessed...") 
+    return templates.TemplateResponse(request, "clinic_assistant.html", {"result":None}) 
+
+@app.post("/ask", response_class=HTMLResponse)
+async def clinic_assitant_answer(request:Request, question:str=Form(...)):
+    logger.info(f"Clinic assistant questino received: '{question}' ") 
+    try:
+        result = rag_pipeline.answer(question) 
+        return templates.TemplateResponse(
+            request,
+            "clinic_assistant.html",
+            {"result":result, 
+             "form_data": {"question":question}, "error":None} 
+        )
+    except Exception as e:
+        raise CustomException(e,sys) 
 
 
 if __name__ == "__main__":

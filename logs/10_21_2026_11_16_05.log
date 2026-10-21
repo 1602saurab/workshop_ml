@@ -1,0 +1,10 @@
+[2026-10-21 11:16:26,066] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 11:16:26,067] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 11:16:26,067] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 11:16:26,069] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 11:16:26,069] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 11:16:26,266] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 11:16:27,448] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 11:16:27,466] 24 rag.retriever -INFO -Retriever ready with 18 indexed chunks

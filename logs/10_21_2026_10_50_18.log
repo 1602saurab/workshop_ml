@@ -1,0 +1,11 @@
+[2026-10-21 10:50:31,311] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 10:50:31,311] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 10:50:31,312] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 10:50:31,312] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 10:50:31,312] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 10:50:31,344] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 10:50:31,465] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 10:50:31,692] 14 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 10:50:31,693] 13 rag.generator -INFO -GROQ API KEY is not set- Geenrator will raise a clear error only when genrrate() is actually called..

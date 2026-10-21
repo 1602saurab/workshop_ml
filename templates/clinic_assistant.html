@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask the Clinic — Sanjeevani Clinic</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="brand">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 21s-7.5-4.6-9.8-9.4C.6 7.9 2.4 4.5 6 4.1c2-.2 3.6.9 6 3 2.4-2.1 4-3.2 6-3 3.6.4 5.4 3.8 3.8 7.5C19.5 16.4 12 21 12 21z" fill="#F6F3EC"/>
+        </svg>
+      </span>
+      Sanjeevani Clinic
+    </a>
+    <nav>
+      <a href="/predict">Classic form</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-shell">
+      <div class="eyebrow-block">
+        <div class="nlp-badge-row" style="justify-content: center;">
+          <span class="nlp-tag">RAG powered</span>
+        </div>
+        <h1>Ask the clinic anything</h1>
+        <p class="sub">
+          Isolation, recovery, kab doctor ko dikhayein - poochiye, jawab
+          humari knowledge base se grounded hoga, sources ke saath.
+        </p>
+      </div>
+
+      <div class="card">
+        <form action="/ask" method="post">
+          <div class="field full">
+            <label for="question">Aapka sawal</label>
+            <textarea id="question" name="question" required
+                      placeholder="e.g. Covid positive aane ke baad kitne din isolate karna chahiye?">{{ form_data.question if form_data else '' }}</textarea>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit">Ask</button>
+          </div>
+        </form>
+
+        {% if error %}
+        <div class="result-card positive" style="margin-top: 24px;">
+          <div class="result-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16h.01M10.3 3.9L2.5 17a2 2 0 001.7 3h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="result-title">Setup needed</p>
+            <p class="result-sub">{{ error }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if result %}
+        <div class="entities-panel">
+          <h4>Answer</h4>
+          <p style="line-height: 1.6; color: var(--ink); margin: 0 0 16px;">{{ result.answer }}</p>
+
+          {% if result.sources %}
+          <h4>Sources</h4>
+          <div class="entity-chips">
+            {% for source in result.sources %}
+            <span class="entity-chip">{{ source }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if result.retrieved_chunks %}
+          <h4 style="margin-top: 18px;">Retrieved passages (for transparency)</h4>
+          <div class="entity-chips" style="flex-direction: column; align-items: flex-start; gap: 10px;">
+            {% for chunk in result.retrieved_chunks %}
+            <span class="entity-chip" style="display: block;">
+              <b>{{ chunk.source }}</b> (similarity: {{ chunk.score }})<br/>
+              {{ chunk.text[:150] }}...
+            </span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Sanjeevani Screening Clinic — this tool assists triage, it does not replace medical diagnosis.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+[2026-10-21 11:11:05,202] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 11:11:05,202] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 11:11:05,202] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 11:11:05,211] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 11:11:05,211] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 11:11:05,272] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 11:11:05,507] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 11:11:05,516] 24 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 11:11:26,279] 180 main -INFO -Clinic assistant questino received: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?' 
+[2026-10-21 11:11:26,281] 64 rag.rag_pipeline -INFO -RAG query received: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?'
+[2026-10-21 11:11:26,402] 79 rag.retriever -INFO -Retrieved 3 chunks for query: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?'
+[2026-10-21 11:11:27,841] 1025 httpx -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-10-21 11:11:27,921] 45 rag.generator -INFO -Generated answer for 'Covid positive aane ke baad me kitne din isolation krna chahiye ?' : I don’t see a question in your message. Could you let me know what you’d like to know about isolatio....
+[2026-10-21 11:11:27,925] 104 rag.rag_pipeline -INFO -RAG answer generated. Sources: ['isolation_guidelines.md']

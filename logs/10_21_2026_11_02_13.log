@@ -1,0 +1,20 @@
+[2026-10-21 11:03:03,264] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 11:03:03,266] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 11:03:03,268] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 11:03:03,268] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 11:03:03,269] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 11:03:05,057] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 11:03:06,415] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 11:03:06,751] 14 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 11:03:22,204] 180 main -INFO -Clinic assistant questino received: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 11:03:22,217] 17 rag.rag_pipeline -INFO -RAG query received: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 11:03:22,422] 34 rag.retriever -INFO -Retrieved 1 chunks for query: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 11:03:24,112] 1025 httpx -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-10-21 11:03:24,197] 45 rag.generator -INFO -Generated answer for 'I have mild cough and body temperature is 102 so what i have to do ?' : Sure! Please let me know what you'd like to ask about.....
+[2026-10-21 11:03:24,197] 27 rag.rag_pipeline -INFO -RAG answer generated. Source used: ['testing_and_recovery.md']
+[2026-10-21 11:04:23,101] 180 main -INFO -Clinic assistant questino received: 'What is pyhon in machine learninig ?' 
+[2026-10-21 11:04:23,102] 17 rag.rag_pipeline -INFO -RAG query received: 'What is pyhon in machine learninig ?' 
+[2026-10-21 11:04:23,104] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\rag\rag_pipeline.py]at line number: [21]with error message: ['NoneType' object is not iterable]
+[2026-10-21 11:04:23,106] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\main.py]at line number: [182]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\rag\rag_pipeline.py]at line number: [21]with error message: ['NoneType' object is not iterable]]

@@ -62,3 +62,15 @@ PDF ---> RAG ---> DATA CHUNKS , EMD , VECTOR DB --> LGS CHECK
 WEDNESDAY tEST ::: 
 PDF  ---> GENRATOR , RAGloADER , RAG_PIPELINE  ---> LOGS CHECK 
 
+
+--------------------------------------------
+
+main.py added 
+
+.env added 
+
+python_dotenv add 
+
+template folder clinic_assistant.html
+
+uvicorn main:app --reload 

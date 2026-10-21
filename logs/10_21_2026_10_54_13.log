@@ -1,0 +1,19 @@
+[2026-10-21 10:54:22,806] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 10:54:22,807] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 10:54:22,807] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 10:54:22,808] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 10:54:22,808] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 10:54:22,893] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 10:54:23,276] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 10:54:23,285] 14 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 10:55:43,566] 175 main -INFO -Clinic assistant(RAG) FORM page accessed...
+[2026-10-21 10:55:56,737] 34 main -INFO -Predict form page accessed.....
+[2026-10-21 10:56:51,776] 180 main -INFO -Clinic assistant questino received: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 10:56:51,777] 17 rag.rag_pipeline -INFO -RAG query received: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 10:56:52,065] 34 rag.retriever -INFO -Retrieved 1 chunks for query: 'I have mild cough and body temperature is 102 so what i have to do ?' 
+[2026-10-21 10:56:54,754] 1025 httpx -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-10-21 10:56:54,858] 45 rag.generator -INFO -Generated answer for 'I have mild cough and body temperature is 102 so what i have to do ?' : I’m sorry, I need a specific question about your symptoms or recovery to give you useful guidance. T....
+[2026-10-21 10:56:54,860] 27 rag.rag_pipeline -INFO -RAG answer generated. Source used: ['testing_and_recovery.md']
+[2026-10-21 10:56:54,861] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\main.py]at line number: [183]with error message: ['clinic_assitant.html' not found in search path: 'templates']

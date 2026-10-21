@@ -1,0 +1,11 @@
+[2026-10-21 10:47:44,908] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 10:47:44,909] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 10:47:44,909] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 10:47:44,909] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 10:47:44,909] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 10:47:45,516] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 10:47:45,869] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 10:47:45,871] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [21]with error message: [[Errno 2] No such file or directory: 'rag/artifacts/tfidf_vectorizer.pkl']
+[2026-10-21 10:47:45,872] 20 src.exception -ERROR -Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\rag\vector_store.py]at line number: [42]with error message: [Error occured in python script: [C:\Users\saurabh\Desktop\workshop_ml\src\utils.py]at line number: [21]with error message: [[Errno 2] No such file or directory: 'rag/artifacts/tfidf_vectorizer.pkl']]

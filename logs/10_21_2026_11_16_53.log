@@ -1,0 +1,26 @@
+[2026-10-21 11:16:59,796] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 11:16:59,796] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 11:16:59,796] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 11:16:59,796] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 11:16:59,796] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 11:16:59,831] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 11:16:59,962] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 11:16:59,968] 24 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 11:17:12,191] 180 main -INFO -Clinic assistant questino received: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?' 
+[2026-10-21 11:17:12,193] 64 rag.rag_pipeline -INFO -RAG query received: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?'
+[2026-10-21 11:17:12,302] 79 rag.retriever -INFO -Retrieved 3 chunks for query: 'Covid positive aane ke baad me kitne din isolation krna chahiye ?'
+[2026-10-21 11:17:13,771] 1025 httpx -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-10-21 11:17:13,825] 114 rag.generator -INFO -Generated answer for 'Covid positive aane ke baad me kitne din isolation krna chahiye ?': Covid\u202fpositive hone ke baad, general guidance ke mutabiq aapko **5\u20117 din** tak ghar par isolate rehn...
+[2026-10-21 11:17:13,828] 104 rag.rag_pipeline -INFO -RAG answer generated. Sources: ['isolation_guidelines.md']
+[2026-10-21 11:18:54,467] 180 main -INFO -Clinic assistant questino received: 'What should I do if I have a fever and cough?' 
+[2026-10-21 11:18:54,467] 64 rag.rag_pipeline -INFO -RAG query received: 'What should I do if I have a fever and cough?'
+[2026-10-21 11:18:54,476] 79 rag.retriever -INFO -Retrieved 3 chunks for query: 'What should I do if I have a fever and cough?'
+[2026-10-21 11:18:55,395] 1025 httpx -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-10-21 11:18:55,398] 114 rag.generator -INFO -Generated answer for 'What should I do if I have a fever and cough?': If you have a fever and cough, use the clinic’s screening tool to see if your symptoms indicate a hi...
+[2026-10-21 11:18:55,401] 104 rag.rag_pipeline -INFO -RAG answer generated. Sources: ['home_care_guidance.md', 'isolation_guidelines.md', 'testing_and_recovery.md']
+[2026-10-21 11:19:40,525] 180 main -INFO -Clinic assistant questino received: 'What is python in Machine Learning ?' 
+[2026-10-21 11:19:40,525] 64 rag.rag_pipeline -INFO -RAG query received: 'What is python in Machine Learning ?'
+[2026-10-21 11:19:40,528] 79 rag.retriever -INFO -Retrieved 0 chunks for query: 'What is python in Machine Learning ?'
+[2026-10-21 11:19:40,528] 104 rag.rag_pipeline -INFO -RAG answer generated. Sources: []

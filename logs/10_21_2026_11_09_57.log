@@ -1,0 +1,14 @@
+[2026-10-21 11:10:08,898] 145 faiss.loader -INFO -Loading faiss with AVX512 support.
+[2026-10-21 11:10:08,898] 151 faiss.loader -INFO -Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-10-21 11:10:08,898] 160 faiss.loader -INFO -Loading faiss with AVX2 support.
+[2026-10-21 11:10:08,898] 166 faiss.loader -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[2026-10-21 11:10:08,901] 186 faiss.loader -INFO -Loading faiss.
+[2026-10-21 11:10:09,014] 189 faiss.loader -INFO -Successfully loaded faiss.
+[2026-10-21 11:10:09,442] 22 rag.rag_config_loader -INFO -RAG config loaded from: rag/config/rag_config.yaml
+[2026-10-21 11:10:09,447] 24 rag.retriever -INFO -Retriever ready with 18 indexed chunks
+[2026-10-21 11:10:17,882] 180 main -INFO -Clinic assistant questino received: 'What is pyhon in machine learninig ?' 
+[2026-10-21 11:10:17,882] 64 rag.rag_pipeline -INFO -RAG query received: 'What is pyhon in machine learninig ?'
+[2026-10-21 11:10:18,068] 79 rag.retriever -INFO -Retrieved 0 chunks for query: 'What is pyhon in machine learninig ?'
+[2026-10-21 11:10:18,070] 104 rag.rag_pipeline -INFO -RAG answer generated. Sources: []
